@@ -13,10 +13,6 @@ Ola_PowerBI_Project/
 ├── Data/
 │   ├── sales_data.csv             # Cleaned Ride Transaction Data (103,024 rows)
 │   └── customer_data.csv          # Customer Profiles & Demographics (4,990 rows)
-├── Web_App/
-│   ├── index.html                 # Interactive Web Dashboard Portal
-│   ├── styles.css                 # Dark Glassmorphism Styling
-│   └── app.js                     # Chart.js Visualizations & Logic
 └── README.md                      # Complete Project Documentation
 ```
 
@@ -161,12 +157,6 @@ Avg_Ride_Distance = AVERAGE(sales_data[Ride_Distance])
 1. **Automate Idle Rerouting**: 30.24% of customer cancellations occur because the driver is not moving towards pickup. Implementing an automated re-dispatch system after 3 minutes of zero movement will recover ~3,000 lost bookings per month.
 2. **Standardize AC Quality Audits**: AC breakdown caused 1,570 customer cancellations. Require mandatory pre-summer climate control compliance for Prime Sedan, SUV, and Plus vehicles.
 3. **Incentivize Digital UPI Payments**: Cash represents over 50% of payment volume (₹18.5M). Offering 5% instant cashback for UPI transactions will streamline driver cash collection and reduce dispute rates.
-
----
-
-## 🌐 Interactive Web Application
-
-Launch the web portal locally by opening [`Web_App/index.html`](Web_App/index.html) in any web browser to view dynamic Chart.js visualizations, explore vehicle tables, and interact with the Power BI dashboard metrics.
 
 ---
 
