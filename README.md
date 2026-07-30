@@ -1,11 +1,6 @@
-# 🚗 OLA Ride-Hailing Sales & Operational Performance Analysis (Power BI + SQL)
+# 🚗 OLA Ride-Hailing Sales & Operational Performance Analysis (Power BI)
 
-![OLA Executive Banner](Images/page1.png)
-
-## 📌 Executive Summary
-This repository houses an end-to-end **Power BI & SQL Data Analytics Solution** analyzing **103,024 ride bookings** for **OLA** across July 2024. The analytics suite evaluates key business drivers including ride booking volumes, gross booking values, vehicle category efficiencies, payment channel distribution, customer lifetime values, cancellation failure modes, and driver/customer service satisfaction ratings.
-
-The project features a **5-Page Power BI Desktop Report**, clean datasets (103K rows), 15 production SQL queries, and an interactive dark-mode web application portal.
+An interactive **Power BI Data Analytics Solution** analyzing **103,024 ride bookings** for **OLA** across July 2024. This project uncovers ride demand trends, revenue potential, vehicle category efficiencies, payment channel distribution, cancellation failure modes, and two-way service satisfaction ratings built entirely in **Power BI Desktop**.
 
 ---
 
@@ -16,102 +11,89 @@ Ola_PowerBI_Project/
 ├── Dashboard/
 │   └── OLA_Project.pbix           # Native Power BI Desktop Report File
 ├── Data/
-│   ├── sales_data.csv             # Raw & Processed Ride Transactions (103,024 rows)
+│   ├── sales_data.csv             # Cleaned Ride Transaction Data (103,024 rows)
 │   └── customer_data.csv          # Customer Profiles & Demographics (4,990 rows)
-├── Images/
-│   ├── dashboard_overview.png     # Executive Summary Banner View
-│   ├── page1.png                  # Page 1: Overall Performance Dashboard
-│   ├── page2.png                  # Page 2: Vehicle Type Performance Matrix
-│   ├── page3.png                  # Page 3: Revenue & Payment Method Distribution
-│   ├── page4.png                  # Page 4: Cancellation Diagnostics & Root Causes
-│   └── page5.png                  # Page 5: Customer & Driver Ratings Analysis
-├── SQL/
-│   └── ola_analytics_queries.sql  # Production SQL Analysis Queries
 ├── Web_App/
-│   ├── index.html                 # Interactive Web Dashboard Portal UI
-│   ├── styles.css                 # Dark Glassmorphism Design System
+│   ├── index.html                 # Interactive Web Dashboard Portal
+│   ├── styles.css                 # Dark Glassmorphism Styling
 │   └── app.js                     # Chart.js Visualizations & Logic
-└── README.md                      # Complete Technical & Business Documentation
+└── README.md                      # Complete Project Documentation
 ```
 
 ---
 
-## 📊 5-Page Power BI Dashboard Gallery & Detailed Metrics
+## 📊 Power BI Report Structure by Page Number
 
 ---
 
-### 1. Page 1 — Overall Performance View
-*Focuses on high-level operational KPIs, booking status composition, and daily volume trends.*
+### 🔹 Page 1: Overall Performance Dashboard
 
-[![Page 1 - Overall View](Images/page1.png)](Images/page1.png)
+*Focuses on macro-level operational KPIs, booking status breakdown, and temporal volume dynamics.*
 
-#### 🔢 Key Metrics & Breakdown:
-- **Total Booking Volume**: `103,024` rides.
-- **Total Booking Value**: `₹35.00 Million` gross potential.
-- **Booking Status Composition**:
-  - **Success**: `63,967` rides (**62.09%**)
-  - **Canceled by Driver**: `18,430` rides (**17.89%**)
-  - **Canceled by Customer**: `10,500` rides (**10.19%**)
-  - **Driver Not Found**: `10,127` rides (**9.83%**)
-- **Ride Volume Over Time**: Daily booking counts hovered between `3,050` and `3,420` rides per day throughout July 2024.
+#### Key Metrics & Figures:
+* **Total Booking Volume**: `103,024` rides
+* **Total Booking Value**: `₹35.00 Million` gross demand potential
+* **Booking Status Composition**:
+  * **Success**: `63,967` rides (**62.09%**)
+  * **Canceled by Driver**: `18,430` rides (**17.89%**)
+  * **Canceled by Customer**: `10,500` rides (**10.19%**)
+  * **Driver Not Found**: `10,127` rides (**9.83%**)
+* **Ride Volume Over Time**: Daily booking counts hovered between `3,050` and `3,420` rides per day throughout July 2024.
 
 ---
 
-### 2. Page 2 — Vehicle Type Breakdown View
+### 🔹 Page 2: Vehicle Type Performance Matrix
+
 *Evaluates gross demand, completed revenue, and ride distance across 7 vehicle categories.*
 
-[![Page 2 - Vehicle Type View](Images/page2.png)](Images/page2.png)
+#### Category Breakdown:
 
-#### 🚘 Vehicle Performance Matrix:
-
-| Vehicle Type | Total Booking Value | Successful Value | Avg. Distance (km) | Total Distance (km) |
-| :--- | :--- | :--- | :--- | :--- |
-| **Prime Sedan** | **₹8.30M** | **₹5.22M** | **25.01** | **235K** |
-| **Prime SUV** | **₹7.93M** | **₹5.22M** | **24.88** | **224K** |
-| **Prime Plus** | **₹8.05M** | **₹5.22M** | **25.03** | **227K** |
-| **Mini** | **₹7.99M** | **₹5.22M** | **24.98** | **226K** |
-| **Auto** | **₹8.09M** | **₹5.22M** | **10.04** | **92K** |
-| **Bike** | **₹7.99M** | **₹5.22M** | **24.93** | **228K** |
-| **E-Bike** | **₹8.18M** | **₹5.22M** | **25.15** | **231K** |
+| Vehicle Type | Total Booking Value | Successful Booking Value | Avg. Distance (km) | Total Distance (km) |
+| :--- | :---: | :---: | :---: | :---: |
+| **Prime Sedan** | ₹8.30M | ₹5.22M | 25.01 | 235K |
+| **Prime SUV** | ₹7.93M | ₹5.22M | 24.88 | 224K |
+| **Prime Plus** | ₹8.05M | ₹5.22M | 25.03 | 227K |
+| **Mini** | ₹7.99M | ₹5.22M | 24.98 | 226K |
+| **Auto** | ₹8.09M | ₹5.22M | 10.04 | 92K |
+| **Bike** | ₹7.99M | ₹5.22M | 24.93 | 228K |
+| **E-Bike** | ₹8.18M | ₹5.22M | 25.15 | 231K |
 
 ---
 
-### 3. Page 3 — Revenue & Customer Insights View
+### 🔹 Page 3: Revenue & Customer Insights
+
 *Analyzes payment channel market share, daily distance trends, and top customer value rankings.*
 
-[![Page 3 - Revenue View](Images/page3.png)](Images/page3.png)
-
-#### 💳 Financial Highlights:
-- **Revenue by Payment Channel**:
-  - **Cash**: `₹18.5M` (Primary payment method)
-  - **UPI**: `₹13.8M` (Leading digital payment channel)
-  - **Credit Card**: `₹2.7M`
-  - **Debit Card**: `₹2.1M`
-- **Top 5 Customers by Booking Value**:
+#### Financial & Passenger Metrics:
+* **Revenue by Payment Method**:
+  * **Cash**: `₹18.5M` (Primary payment method)
+  * **UPI**: `₹13.8M` (Leading digital payment channel)
+  * **Credit Card**: `₹2.7M`
+  * **Debit Card**: `₹2.1M`
+* **Top 5 Customers by Booking Value**:
   1. `CID785112` — **₹8,025**
   2. `CID308763` — **₹6,281**
   3. `CID734557` — **₹6,177**
   4. `CID353074` — **₹6,110**
   5. `CID836942` — **₹6,019**
-  - **Combined Top 5 Total**: **₹32,612**
+  * **Top 5 Combined Value**: **₹32,612**
 
 ---
 
-### 4. Page 4 — Cancellation Diagnostics View
+### 🔹 Page 4: Cancellation Diagnostics
+
 *Pinpoints fulfillment failures, unfulfilled demand, and driver/customer cancellation drivers.*
 
-[![Page 4 - Cancellation View](Images/page4.png)](Images/page4.png)
-
-#### 🚫 Failure Diagnostics:
-- **Total Cancellations**: `28,933` rides (**28.08%** cancellation rate).
-- **Driver Not Found**: `10,127` unassigned rides (**9.83%** of total demand).
-- **Customer Cancellation Reasons**:
+#### Operational Failure Breakdown:
+* **Total Cancellations**: `28,933` rides (**28.08%** cancellation rate)
+* **Driver Not Found**: `10,127` unassigned rides (**9.83%** of total demand)
+* **Customer Cancellation Reasons**:
   1. *Driver is not moving towards pickup*: **30.24%** (3,180 rides)
   2. *Driver asked to cancel*: **25.43%** (2,670 rides)
   3. *Change of plans*: **19.82%** (2,080 rides)
   4. *AC is Not working*: **14.93%** (1,570 rides)
   5. *Wrong Address*: **9.57%** (1,010 rides)
-- **Driver Cancellation Reasons**:
+* **Driver Cancellation Reasons**:
   1. *Personal & Car related issue*: **35.49%** (6,540 rides)
   2. *Customer related issue*: **29.36%** (5,410 rides)
   3. *Customer was coughing/sick*: **19.82%** (3,650 rides)
@@ -119,12 +101,11 @@ Ola_PowerBI_Project/
 
 ---
 
-### 5. Page 5 — Ratings & Quality View
+### 🔹 Page 5: Ratings & Service Quality Analysis
+
 *Measures two-way service ratings between drivers and customers across all vehicle categories.*
 
-[![Page 5 - Ratings View](Images/page5.png)](Images/page5.png)
-
-#### ⭐️ Rating Comparison Matrix:
+#### Ratings Comparison Matrix:
 
 | Vehicle Type | Avg. Customer Rating | Avg. Driver Rating |
 | :--- | :---: | :---: |
@@ -138,10 +119,10 @@ Ola_PowerBI_Project/
 
 ---
 
-## 🧮 Key DAX Measures
+## 🧮 Key Power BI DAX Measures
 
 ```dax
--- Total Bookings
+-- Total Bookings Count
 Total_Bookings = COUNT(sales_data[Booking_ID])
 
 -- Successful Bookings Count
@@ -152,6 +133,12 @@ Successful_Bookings = CALCULATE(
 
 -- Total Booking Value
 Total_Booking_Value = SUM(sales_data[Booking_Value])
+
+-- Successful Booking Value
+Successful_Booking_Value = CALCULATE(
+    SUM(sales_data[Booking_Value]),
+    sales_data[Booking_Status] = "Success"
+)
 
 -- Cancellation Rate %
 Cancellation_Rate = DIVIDE(
@@ -169,42 +156,6 @@ Avg_Ride_Distance = AVERAGE(sales_data[Ride_Distance])
 
 ---
 
-## 🔍 Featured SQL Queries
-
-Production SQL scripts are available in [`SQL/ola_analytics_queries.sql`](SQL/ola_analytics_queries.sql).
-
-```sql
--- 1. Retrieve all successful bookings
-SELECT * 
-FROM sales_data 
-WHERE Booking_Status = 'Success';
-
--- 2. Find average ride distance for each vehicle type
-SELECT 
-    Vehicle_Type, 
-    ROUND(AVG(Ride_Distance), 2) AS Avg_Distance_KM 
-FROM sales_data 
-GROUP BY Vehicle_Type 
-ORDER BY Avg_Distance_KM DESC;
-
--- 3. Top 5 customers by total booking value
-SELECT 
-    Customer_ID, 
-    COUNT(Booking_ID) AS Total_Rides, 
-    SUM(Booking_Value) AS Sum_Booking_Value 
-FROM sales_data 
-GROUP BY Customer_ID 
-ORDER BY Sum_Booking_Value DESC 
-LIMIT 5;
-
--- 4. Driver cancellations due to personal & car issues
-SELECT COUNT(*) AS Personal_Car_Cancellations 
-FROM sales_data 
-WHERE Canceled_Rides_by_Driver = 'Personal & Car related issue';
-```
-
----
-
 ## 💡 Strategic Business Insights & Recommendations
 
 1. **Automate Idle Rerouting**: 30.24% of customer cancellations occur because the driver is not moving towards pickup. Implementing an automated re-dispatch system after 3 minutes of zero movement will recover ~3,000 lost bookings per month.
@@ -215,8 +166,8 @@ WHERE Canceled_Rides_by_Driver = 'Personal & Car related issue';
 
 ## 🌐 Interactive Web Application
 
-Launch the web portal locally by opening [`Web_App/index.html`](Web_App/index.html) in any web browser to view dynamic Chart.js visualizations, explore vehicle tables, and run interactive SQL queries.
+Launch the web portal locally by opening [`Web_App/index.html`](Web_App/index.html) in any web browser to view dynamic Chart.js visualizations, explore vehicle tables, and interact with the Power BI dashboard metrics.
 
 ---
 
-*Project created & documented by Satyam Singh | OLA Power BI Business Intelligence Analytics Suite*
+*Project created & documented by **Satyam Singh** | OLA Power BI Business Intelligence Analytics Suite*
