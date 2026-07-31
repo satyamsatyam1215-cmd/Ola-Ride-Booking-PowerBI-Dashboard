@@ -4,19 +4,6 @@ An interactive **Power BI Data Analytics Solution** analyzing **103,024 ride boo
 
 ---
 
-## 📁 Repository Directory Structure
-
-```
-Ola_PowerBI_Project/
-├── Dashboard/
-│   └── OLA_Project.pbix           # Native Power BI Desktop Report File
-├── Data/
-│   ├── sales_data.csv             # Cleaned Ride Transaction Data (103,024 rows)
-│   └── customer_data.csv          # Customer Profiles & Demographics (4,990 rows)
-└── README.md                      # Complete Project Documentation
-```
-
----
 
 ## 📊 Power BI Report Structure by Page Number
 
