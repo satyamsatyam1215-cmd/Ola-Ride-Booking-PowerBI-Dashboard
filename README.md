@@ -5,8 +5,6 @@ An interactive **Power BI Data Analytics Solution** analyzing **103,024 ride boo
 ---
 
 
-## 📊 Power BI Report Structure by Page Number
-
 ---
 
 ### 🔹 Page 1: Overall Performance Dashboard
